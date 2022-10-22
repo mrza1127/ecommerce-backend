@@ -32,9 +32,6 @@ router.get('/:id', (req, res) => {
     include: [
       {
         model: Product,
-        where: {
-          category_id: Sequelize.col('category.id')
-        },
         attributes: ['id', 'product_name', 'price', 'stock']
       }
     ]
